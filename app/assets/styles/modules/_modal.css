@@ -11,18 +11,17 @@
   transform: scale(1.2);
   transition: all .3s ease-out;
 
-  &--is-visible{
+  &--is-visible {
     opacity: 1;
-    visibility:visible;
-    transform:scale(1);
+    visibility: visible;
+    transform: scale(1);
   }
 
-  &__inner{
+  &__inner {
     position: absolute;
-    width:100%;
-    top:50%;
-    transform:translateY(-50%);
-    
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__description {
@@ -32,19 +31,18 @@
     line-height: 1.65;
   }
 
-  &__close{
+  &__close {
     position: absolute;
-    top:15px;
-    right:15px;
+    top: 15px;
+    right: 15px;
     font-size: 2rem;
     transform: scaleX(1.2);
-    transform-origin:100% 0 ;
-    color:$mainBlue;
+    transform-origin: 100% 0;
+    color: $mainBlue;
+    cursor: pointer;
 
-    &:hover{
-      color:$mainOrange;
-      cursor: pointer;
+    &:hover {
+      color: $mainOrange;
     }
   }
-
 }

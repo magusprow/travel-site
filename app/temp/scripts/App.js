@@ -10799,6 +10799,7 @@
 	  function StickyHeader() {
 	    _classCallCheck(this, StickyHeader);
 
+	    this.lazyImages = (0, _jquery2.default)(".lazyyload");
 	    this.siteHeader = (0, _jquery2.default)(".site-header");
 	    this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
 	    this.createHeaderWaypoint();
@@ -10806,9 +10807,17 @@
 	    this.headerLinks = (0, _jquery2.default)(".primary-nav a");
 	    this.createPageSectionWaypoints();
 	    this.addSmoothScrolling();
+	    this.refreshWaypoints();
 	  }
 
 	  _createClass(StickyHeader, [{
+	    key: 'refreshWaypoints',
+	    value: function refreshWaypoints() {
+	      this.lazyImages.on('load', function () {
+	        Waypoint.refreshAll();
+	      });
+	    }
+	  }, {
 	    key: 'addSmoothScrolling',
 	    value: function addSmoothScrolling() {
 	      this.headerLinks.smoothScroll();
@@ -11263,11 +11272,13 @@
 	  _createClass(Modal, [{
 	    key: "events",
 	    value: function events() {
-	      //clicking the open modal button
+	      // clicking the open modal button
 	      this.openModalButton.click(this.openModal.bind(this));
-	      //clicking the x close modal button
+
+	      // clicking the x close modal button
 	      this.closeModalButton.click(this.closeModal.bind(this));
-	      //pushes any escape key
+
+	      // pushes any key
 	      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 	    }
 	  }, {

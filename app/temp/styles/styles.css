@@ -549,8 +549,8 @@ a {
   max-width: 976px;
 }
 
-.wrapper--narrow{
-  max-width:470px;
+.wrapper--narrow {
+  max-width: 470px;
 }
 
 .wrapper--no-padding-until-medium {
@@ -640,7 +640,7 @@ a {
 
 @media (min-width: 1010px) {
 
-  .page-section--testimonials {
+  .page-section--testimonials.lazyloaded {
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
     background-size: cover;
   }
@@ -871,7 +871,7 @@ a {
   color: #2f5572;
 }
 
-.section-title--less-margin{
+.section-title--less-margin {
   margin-bottom: 1.3rem;
   margin-top: 0;
 }
@@ -1332,20 +1332,19 @@ Instead edit gulp/templates/sprite */
   visibility: hidden;
   transform: scale(1.2);
   transition: all .3s ease-out;
-
 }
 
-.modal--is-visible{
+.modal--is-visible {
   opacity: 1;
-  visibility:visible;
-  transform:scale(1);
+  visibility: visible;
+  transform: scale(1);
 }
 
-.modal__inner{
+.modal__inner {
   position: absolute;
-  width:100%;
-  top:50%;
-  transform:translateY(-50%);
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal__description {
@@ -1355,19 +1354,19 @@ Instead edit gulp/templates/sprite */
   line-height: 1.65;
 }
 
-.modal__close{
+.modal__close {
   position: absolute;
-  top:15px;
-  right:15px;
+  top: 15px;
+  right: 15px;
   font-size: 2rem;
   transform: scaleX(1.2);
-  transform-origin:100% 0 ;
-  color:#2f5572;
+  transform-origin: 100% 0;
+  color: #2f5572;
+  cursor: pointer;
 }
 
-.modal__close:hover{
-  color:#d59541;
-  cursor: pointer;
+.modal__close:hover {
+  color: #d59541;
 }
 
 .social-icons {
